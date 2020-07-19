@@ -23,7 +23,7 @@
     </div>
 </div>
 <div class="bill-section">
-    <table id="bill-table">
+    <table >
         <caption id="table-title">Bill section</caption>
         <thead>
             <tr>
@@ -35,21 +35,29 @@
                 <th colspan="2">Action</th>
             </tr>
         </thead>
-        <tbody>
+        <tbody id="bill-table">
             {{#each bills}}
-              <tr>
-                  <td>{{this.id}}</td>
-                  <td>{{this.productname}}</td>
-                  <td>{{this.quantity}}</td>
-                  <td>{{this.cost}}</td>
-                  <td>{{this.price}}</td>
+              <tr >
+                  <td id="bill-id">{{this.id}}</td>
+                  <td id="product-name">{{this.productname}}</td>
+                  <td id="product-qunatity">{{this.quantity}}</td>
+                  <td id="product-cost">{{this.cost}}</td>
+                  <td id="product-price">{{this.price}}</td>
                   <td><button class="btn-alert">Edit</button></td>
                   <td><button class="btn-danger">Delete</button></td>
               </tr>
+              
             {{/each}}
+            <tr>
+                  <td>2</td>
+                  <td>Aret</td>
+                  <td>2</td>
+                  <td>240</td>
+                  <td>480</td>
+              </tr>
         </tbody>
     </table>
     <div class="checkout-section">
-        <button class="btn-checkout">Checkout</button>
+        <button class="btn-checkout" onclick="checkout()">Checkout</button>
     </div>
 </div>
